@@ -13,4 +13,9 @@ class ProductController extends Controller
         $products= Product::latest()->paginate(20);
         return view('home.products', compact('products'));
     }
+
+    public function single(Product $product)
+    {
+        return view('home.single-product', compact('product'));
+    }
 }
