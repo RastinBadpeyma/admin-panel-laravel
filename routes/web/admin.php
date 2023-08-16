@@ -29,6 +29,6 @@ Route::post('/users/{user}/permissions',[\App\Http\Controllers\Admin\User\Permis
 Route::resource('users',UserController::class);
 Route::resource('permissions',PermissionController::class);
 Route::resource('roles',RoleController::class);
-Route::resource('products' ,\App\Http\Controllers\Admin\ProductConroller::class);
+Route::resource('products' ,\App\Http\Controllers\Admin\ProductController::class);
 
 
