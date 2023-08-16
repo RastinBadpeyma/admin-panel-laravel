@@ -33,6 +33,11 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
+
     public function isSuperUser()
     {
         return $this->is_superuser;
