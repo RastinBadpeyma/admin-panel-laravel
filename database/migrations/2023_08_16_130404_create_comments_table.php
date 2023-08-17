@@ -30,30 +30,6 @@ return new class extends Migration
         Schema::dropIfExists('comments');
     }
 };
-@auth
-{{--                        <span class="btn btn-sm btn-primary" data-toggle="modal" data-target="#sendComment">ثبت نظر جدید</span>--}}
-                        <form action="#" method="post" class="comment-form default-form">
-                            <div class="row">
-
-
-                                <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-
-                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                        <input type="text" name="subject" placeholder="موضوع" required="">
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                        <textarea name="message" placeholder="دیدگاه شما"></textarea>
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
-                                        <button type="submit" class="btn btn-primary">ارسال نظر</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-
-@else
-                        <p><b>For Add Comment You need to login first <a href="{{ route('login')}}"> Login Here </a> </b></p>
-@endauth
 
 
 
