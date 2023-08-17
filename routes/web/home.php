@@ -25,3 +25,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/products' , [ProductController::class , 'index']);
 Route::get('/products/{product}' , [ProductController::class , 'single']);
+
+Route::post('/comments' , [ProductController::class , 'comment'])->name('store.comment');
