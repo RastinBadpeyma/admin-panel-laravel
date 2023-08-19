@@ -20,7 +20,7 @@
 
                                     <th>آیدی نظر</th>
                                     <th> نام محصول</th>
-                                    <th>توضیحات محصول</th>
+                                    <th> مدل محصول</th>
                                     <th>نام کاربر</th>
                                     <th>ایدی کاربر</th>
                                     <th>متن</th>
@@ -33,7 +33,7 @@
                                     <tr>
                                         <td>{{ $comment->id }}</td>
                                         <td>{{ $comment->product->title }}</td>
-                                        <td>{{ $comment->product->description }}</td>
+                                        <td>{{ $comment->subject }}</td>
                                         <td>{{ $comment->user->name }}</td>
                                         <td>{{ $comment->user->id }}</td>
                                         <td>{{ $comment->message }}</td>

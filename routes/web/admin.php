@@ -34,7 +34,7 @@ Route::resource('roles',RoleController::class);
 Route::resource('products' ,\App\Http\Controllers\Admin\ProductController::class);
 
 Route::get('/comments',[CommentController::class,'AdminProductComment'])->name('products.comments');
-Route::get('/comments/reply',[CommentController::class])->name('comments.reply');
-
+Route::get('/comments/reply/{id}',[CommentController::class , 'AdminCommentReply'])->name('comments.reply');
+Route::post('/reply/message', [CommentController::class, 'ReplyMessage'])->name('reply.message');
 
 
