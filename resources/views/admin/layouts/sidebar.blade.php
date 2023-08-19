@@ -98,6 +98,23 @@
 
 
 
+
+
+
+                    <li class="nav-item has-treeview">
+                        <a href="{{route('admin.products.comments')}}" class="nav-link">
+                            <i class="nav-icon fa fa-users"></i>
+                            <p>
+                              مدیریت نظرات
+                                <i class="right fa fa-angle-left"></i>
+                            </p>
+                        </a>
+
+                    </li>
+
+
+
+
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->

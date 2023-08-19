@@ -50,6 +50,7 @@
                         {{--                        <span class="btn btn-sm btn-primary" data-toggle="modal" data-target="#sendComment">ثبت نظر جدید</span>--}}
                         <form action="{{route('store.comment')}}" method="post" class="comment-form default-form">
 
+
                             <input type="hidden" name="post_id" value="{{$product->id}}">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 form-group">
