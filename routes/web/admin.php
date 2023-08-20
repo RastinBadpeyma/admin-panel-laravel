@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\User\UserController;
+use App\Http\Controllers\Admin\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -37,4 +38,6 @@ Route::get('/comments',[CommentController::class,'AdminProductComment'])->name('
 Route::get('/comments/reply/{id}',[CommentController::class , 'AdminCommentReply'])->name('comments.reply');
 Route::post('/reply/message', [CommentController::class, 'ReplyMessage'])->name('reply.message');
 
+
+Route::resource('categories' ,CategoryController::class);
 

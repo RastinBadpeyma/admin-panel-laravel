@@ -9,7 +9,9 @@
                     <h1 class="m-0 text-dark">{{ $title }}</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
-
+                    <ol class="breadcrumb float-sm-left">
+                        {{ $breadcrumb }}
+                    </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -25,3 +27,10 @@
     <!-- /.content -->
 @endsection
 
+@section('script')
+    {{ $script ?? '' }}
+@endsection
+
+@section('head')
+    {{ $head ?? '' }}
+@endsection

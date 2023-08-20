@@ -114,6 +114,19 @@
 
 
 
+                    <li class="nav-item has-treeview">
+                        <a href="{{route('admin.categories.index')}}" class="nav-link">
+                            <i class="nav-icon fa fa-users"></i>
+                            <p>
+                                مدیریت دسته بندی ها
+                                <i class="right fa fa-angle-left"></i>
+                            </p>
+                        </a>
+
+                    </li>
+
+
+
 
                 </ul>
             </nav>
