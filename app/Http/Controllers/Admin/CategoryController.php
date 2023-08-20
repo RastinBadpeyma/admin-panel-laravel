@@ -30,8 +30,30 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        if($request->parent) {
+            $request->validate([
+                'parent' => 'exists:categories,id'
+            ]);
+        }
+
+        $request->validate([
+            'name' => 'required|min:3'
+        ]);
+
+        Category::create([
+            'name' => $request->name,
+            'parent' => $request->parent ?? 0
+        ]);
+
+
+           return redirect(route('admin.categories.index'));
+
+
+       }
+
+
+
+
 
     /**
      * Display the specified resource.
@@ -44,24 +66,42 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Category $category)
     {
-        //
+        return view('admin.categories.edit', compact('category'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Category $category)
     {
-        //
+        if($request->parent) {
+            $request->validate([
+                'parent' => 'exists:categories,id'
+            ]);
+        }
+
+        $request->validate([
+            'name' => 'required|min:3'
+        ]);
+
+
+        $category->update([
+            'name' => $request->name,
+            'parent' => $request->parent
+        ]);
+        return redirect(route('admin.categories.index'));
+
+
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Category $category)
     {
-        //
+        $category->delete();
+        return back();
     }
 }
